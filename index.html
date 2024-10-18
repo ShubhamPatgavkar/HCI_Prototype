@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid Day Meal Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>Mid Day Meal Scheme</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#reports">Reports</a></li>
+            <li><a href="#alerts">Alerts</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- Hamburger Icon for Mobile View -->
+        <div class="hamburger" onclick="toggleNavbar()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Mid Day Meal Scheme Dashboard</h1>
+    </header>
+
+    <!-- Overview Cards -->
+    <section class="overview" id="overview">
+        <div class="card">
+            <h3>Total Meals Delivered</h3>
+            <p id="mealsDelivered">12,530</p>
+        </div>
+        <div class="card">
+            <h3>Meals Quality</h3>
+            <p id="mealsQuality">Good</p>
+        </div>
+        <div class="card">
+            <h3>Schools Requesting Supplies</h3>
+            <p id="supplyRequests">5 Schools</p>
+        </div>
+    </section>
+
+    <!-- Analytics & Reports Section -->
+    <section class="reports" id="analytics">
+        <h2>Analytics & Reports</h2>
+        <div class="chart-container">
+            <canvas id="qualityChart"></canvas>
+            <canvas id="quantityChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="performanceChart"></canvas>
+        </div>
+    </section>
+
+    <!-- Alerts Section -->
+    <section class="alerts">
+        <h2>Alerts</h2>
+        <ul id="alertList">
+            <li class="success">All systems operational.</li>
+            <li class="warning">Supplies running low at 3 schools.</li>
+            <li class="error">Meal delivery delayed at 2 locations.</li>
+            <li class="info">New updates available for the dashboard.</li>
+        </ul>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Mid Day Meal Scheme © 2024</p>
+        <p class="signature">Made by Shubham Patgavkar IT C</p>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

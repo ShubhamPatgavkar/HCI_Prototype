@@ -1,0 +1,246 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e6f7ff;
+    /* Light blue background */
+    color: #333;
+}
+
+header {
+    background-color: #4da6ff;
+    /* Soft blue */
+    color: white;
+    padding: 1rem 2rem;
+    /* Reduced padding */
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    /* Reduced font size */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #3399ff;
+    /* Muted blue */
+    padding: 0.5rem 1.5rem;
+    /* Reduced padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo h2 {
+    color: white;
+    font-size: 1.5rem;
+    /* Reduced font size */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    /* Reduced gap between links */
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    /* Smaller font for navbar links */
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ffcc00;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 20px;
+    /* Smaller bars */
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Overview Cards */
+.overview {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    flex: 1;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 2rem;
+    color: #3399ff;
+    /* Use the muted blue color */
+}
+
+/* Chart Styling */
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+canvas {
+    max-width: 350px;
+    /* Reduced size */
+    height: 250px;
+    /* Reduced height */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+/* Alerts */
+.alerts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.alerts ul li {
+    background-color: #cce5ff;
+    color: #004085;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #b8daff;
+}
+
+.alerts ul li:first-child {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 5px solid #c3e6cb;
+}
+
+/* Footer */
+footer {
+    background-color: #3399ff;
+    /* Muted blue */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+.signature {
+    font-size: 0.8rem;
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #3399ff;
+        /* Muted blue */
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        gap: 2rem;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in;
+    }
+
+    .navbar .nav-links li {
+        text-align: center;
+    }
+
+    .navbar .nav-links.active {
+        transform: translateX(0%);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+/* Alerts */
+.alerts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.alerts ul li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid;
+}
+
+.alerts ul li.success {
+    background-color: #d4edda;
+    /* Light green */
+    color: #155724;
+    border-left-color: #c3e6cb;
+    /* Darker green */
+}
+
+.alerts ul li.warning {
+    background-color: #fff3cd;
+    /* Light yellow */
+    color: #856404;
+    border-left-color: #ffeeba;
+    /* Darker yellow */
+}
+
+.alerts ul li.error {
+    background-color: #f8d7da;
+    /* Light red */
+    color: #721c24;
+    border-left-color: #f5c6cb;
+    /* Darker red */
+}
+
+.alerts ul li.info {
+    background-color: #cce5ff;
+    /* Light blue */
+    color: #004085;
+    border-left-color: #b8daff;
+    /* Darker blue */
+}
